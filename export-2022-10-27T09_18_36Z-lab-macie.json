@@ -1,0 +1,160 @@
+[
+  {
+    "accountId": "508148047162",
+    "archived": false,
+    "category": "CLASSIFICATION",
+    "classificationDetails": {
+      "detailedResultsLocation": "s3://[export-config-not-set]/AWSLogs/508148047162/Macie/us-west-2/04e0d2b246e6063e50c9088a17740cbe/508148047162/d6dbdce3-a023-32df-a4d6-0d785c4f4b79.jsonl.gz",
+      "jobArn": "arn:aws:macie2:us-west-2:508148047162:classification-job/04e0d2b246e6063e50c9088a17740cbe",
+      "jobId": "04e0d2b246e6063e50c9088a17740cbe",
+      "originType": "SENSITIVE_DATA_DISCOVERY_JOB",
+      "result": {
+        "additionalOccurrences": false,
+        "customDataIdentifiers": {
+          "detections": [
+            {
+              "arn": "81eae8b9-12b5-46c7-aab9-04c8db6a6672",
+              "count": 4,
+              "name": "EmpID",
+              "occurrences": {
+                "cells": [
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "Emp ID",
+                    "row": 2
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "Emp ID",
+                    "row": 3
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "Emp ID",
+                    "row": 4
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "Emp ID",
+                    "row": 5
+                  }
+                ]
+              }
+            }
+          ],
+          "totalCount": 4
+        },
+        "mimeType": "text/csv",
+        "sensitiveData": [
+          {
+            "category": "PERSONAL_INFORMATION",
+            "detections": [
+              {
+                "count": 1,
+                "occurrences": {
+                  "cells": [
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "Name",
+                      "row": 6
+                    }
+                  ]
+                },
+                "type": "NAME"
+              }
+            ],
+            "totalCount": 1
+          }
+        ],
+        "sizeClassified": 135,
+        "status": {
+          "code": "COMPLETE",
+          "reason": null
+        }
+      }
+    },
+    "count": 1,
+    "createdAt": "2022-10-27T09:13:20.550Z",
+    "description": "The object contains more than one type of sensitive information.",
+    "id": "4b193f98615a50fe29e5676174707809",
+    "partition": "aws",
+    "region": "us-west-2",
+    "resourcesAffected": {
+      "s3Bucket": {
+        "allowsUnencryptedObjectUploads": "TRUE",
+        "arn": "arn:aws:s3:::maciehandsondemo193",
+        "createdAt": "2022-10-27T09:01:59.000Z",
+        "defaultServerSideEncryption": {
+          "encryptionType": "NONE",
+          "kmsMasterKeyId": null
+        },
+        "name": "maciehandsondemo193",
+        "owner": {
+          "displayName": "xquang.n",
+          "id": "f2d9ef31cf86e43170886017c4937270186b260810c4fb44093e971b5b82a3d1"
+        },
+        "publicAccess": {
+          "effectivePermission": "NOT_PUBLIC",
+          "permissionConfiguration": {
+            "accountLevelPermissions": {
+              "blockPublicAccess": {
+                "blockPublicAcls": false,
+                "blockPublicPolicy": false,
+                "ignorePublicAcls": false,
+                "restrictPublicBuckets": false
+              }
+            },
+            "bucketLevelPermissions": {
+              "accessControlList": {
+                "allowsPublicReadAccess": false,
+                "allowsPublicWriteAccess": false
+              },
+              "blockPublicAccess": {
+                "blockPublicAcls": true,
+                "blockPublicPolicy": true,
+                "ignorePublicAcls": true,
+                "restrictPublicBuckets": true
+              },
+              "bucketPolicy": {
+                "allowsPublicReadAccess": false,
+                "allowsPublicWriteAccess": false
+              }
+            }
+          }
+        },
+        "tags": []
+      },
+      "s3Object": {
+        "bucketArn": "arn:aws:s3:::maciehandsondemo193",
+        "eTag": "3697e79e175ed23001534611990a825c",
+        "extension": "csv",
+        "key": "pii.csv",
+        "lastModified": "2022-10-27T09:02:44.000Z",
+        "path": "maciehandsondemo193/pii.csv",
+        "publicAccess": false,
+        "serverSideEncryption": {
+          "encryptionType": "NONE",
+          "kmsMasterKeyId": null
+        },
+        "size": 135,
+        "storageClass": "STANDARD",
+        "tags": [],
+        "versionId": ""
+      }
+    },
+    "sample": false,
+    "schemaVersion": "1.0",
+    "severity": {
+      "description": "Medium",
+      "score": 2
+    },
+    "title": "The S3 object contains multiple types of sensitive information.",
+    "type": "SensitiveData:S3Object/Multiple",
+    "updatedAt": "2022-10-27T09:13:20.550Z"
+  }
+]
